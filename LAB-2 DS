@@ -1,0 +1,20 @@
+//swapping using pointers.
+#include<stdio.h>
+void swapref(int *a,int *b);
+void main()
+{
+
+    int a=10;
+    int b=15;
+    printf("the values of a and b before swapping:%d\n%d\n",a,b);
+    swapref(&a,&b);
+    printf(" of two values after call by reference\n%d\n%d",a,b);
+}
+void swapref(int *a,int *b)
+{
+    int temp;
+    temp=*a;
+    *a=*b;
+    *b=temp;
+    printf("the values of a and b after swapping:\n",a,b);
+}
